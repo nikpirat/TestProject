@@ -9,4 +9,6 @@ import com.example.TestProject.model.Ticket;
 
 public interface TicketService {
     Ticket getById(long id);
+
+    Ticket findCacheById(long id);
 }

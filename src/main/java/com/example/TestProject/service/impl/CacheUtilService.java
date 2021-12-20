@@ -1,10 +1,16 @@
-package com.example.TestProject.util;
+package com.example.TestProject.service.impl;
+
 
 import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.*;
 
-public class CacheUtil<K,V> {
+/**
+ * TASK 4 - CACHING DATA
+ */
+
+
+public class CacheUtilService<K,V> {
     private ConcurrentHashMap<Key,V> globalMap = new ConcurrentHashMap<>();
     private long default_timeout;
     private ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor(r -> {
@@ -14,7 +20,7 @@ public class CacheUtil<K,V> {
     });
     //Поток сделаем демоном, для того чтоб при завершении основного потока процесс, который чистит кеш так же завершался.
 
-    public CacheUtil(long default_timeout)  throws Exception {
+    public CacheUtilService(long default_timeout)  throws Exception {
         if (default_timeout < 100) {
             throw new Exception("Too short interval for storage in the cache. Interval should be more than 10 ms");
         }
