@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 1</title>
+    <link rel="stylesheet" th:href="@{/css/task1.css}">
+</head>
+<body>
+<div class="form-wrap">
+    <form action="/task1" method="post">
+        <h2>Task 1 - check ticket</h2>
+        <a href="/task1">Previous Task</a>
+        <input type="text" name="id" value="" placeholder="ticket id" required />
+        <input type="submit" value="Submit" />
+        <a href="/task2">Next Task</a>
+    </form>
+    <div th:if="${message}", th:text="${message}"></div>
+</div>
+</body>
+</html>
