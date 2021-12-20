@@ -1,6 +1,5 @@
 package com.example.TestProject.controller;
 
-import com.example.TestProject.model.Coupon;
 import com.example.TestProject.service.CouponService;
 import com.example.TestProject.service.LuggageService;
 import com.example.TestProject.service.TicketService;
@@ -39,6 +38,17 @@ public class MainController {
         this.luggageService = luggageService;
         this.couponService = couponService;
     }
+
+    @GetMapping("/")
+    public String welcomePage() {
+        return "index";
+    }
+
+    @GetMapping("/explore")
+    public String tasks() {
+        return "tasks";
+    }
+
 
     /**
      * TASK 1 - FIND TICKET BY ID

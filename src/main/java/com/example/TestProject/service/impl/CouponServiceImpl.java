@@ -29,8 +29,8 @@ public class CouponServiceImpl implements CouponService {
     @Override
     public double setNewPrice(double currentPrice) {
         double price = 0;
-        int min = 1;
-        int max = 3;
+        short min = 1;
+        short max = 3;
         Random random = new Random();
         switch (random.nextInt(max-min+1)+min) {
             case 1:

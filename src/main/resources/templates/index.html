@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <title>Main menu</title>
+</head>
+<body>
+<section class="showcase">
+    <header>
+        <h2 class="logo">Nick Nikolaiev</h2>
+        <div class="toggle"></div>
+    </header>
+    <div class="overlay"></div>
+    <div class="text">
+        <h2>The project was created </h2>
+        <h3>Specifically for the <span style="color: #c41717">Quantum Projects</span> </h3>
+        <!--        Технологии для людей. Развитие научного мастерства. Усиление всесторонней компетентности -->
+        <p>Technologies for people. Development of scientific excellence. Strengthening Comprehensive Competence</p>
+        <a href="/explore">Explore</a>
+    </div>
+</section>
+<div class="menu">
+    <ul>
+        <li><a href="/task1">Task 1</a></li>
+        <li><a href="/task2">Task 2</a></li>
+        <li><a href="/task3">Task 3</a></li>
+    </ul>
+</div>
+<script>
+    const menuToggle = document.querySelector('.toggle');
+    const showcase = document.querySelector('.showcase');
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        showcase.classList.toggle('active');
+    })
+</script>
+</body>
+</html>
