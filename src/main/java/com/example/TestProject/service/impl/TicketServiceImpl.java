@@ -10,11 +10,6 @@ import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toCollection;
 
-/**
- * Service class for {@link com.example.TestProject.model.Ticket}
- *
- */
-
 @Service
 public class TicketServiceImpl implements TicketService {
     private final List<Ticket> tickets = Stream.of(new Ticket(1) ,new Ticket(2), new Ticket(3))

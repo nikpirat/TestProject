@@ -1,7 +1,6 @@
 package com.example.TestProject.service.impl;
 
 import com.example.TestProject.model.Luggage;
-import com.example.TestProject.model.Ticket;
 import com.example.TestProject.service.LuggageService;
 import org.springframework.stereotype.Service;
 
